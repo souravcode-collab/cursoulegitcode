@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Reliance Digital Carousel</title>
+
+    <!-- Custom Styles -->
+    <style>
+        /* Body and HTML reset */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: aqua;
+        }
+
+        /* Navbar styling - Fixed at the top of the page */
+        .navbar {
+            background-color: #e60000; /* Reliance Digital Red */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #0061b0; /* Light blue on hover */
+        }
+
+        /* Create space between navbar and content */
+        .content {
+            margin-top: 80px; /* Offset the content from the fixed navbar */
+        }
+
+        /* Centering the carousel section */
+        .carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full screen height */
+        }
+
+        /* Carousel container styling */
+        .carousel {
+            width: 80%;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            bottom: 20px;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            opacity: 0.8;
+        }
+
+        .carousel-control-prev-icon:hover,
+        .carousel-control-next-icon:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            opacity: 1;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Carousel indicators */
+        .carousel-indicators li {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .carousel-indicators .active {
+            background-color: #0061b0; /* Blue color for active indicator */
+        }
+
+        /* Custom active color for carousel captions */
+        .carousel-caption h3 {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar Section (Reliance Digital theme) -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Reliance Digital</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="https://www.reliancedigital.in/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.reliancedigital.in/laptops-online">Laptops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.reliancedigital.in/smartphones">Smartphones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.reliancedigital.in/accessories">Accessories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.reliancedigital.in/offers">Offers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <div class="carousel-container">
+            <!-- Carousel Section -->
+            <div id="car" class="carousel slide" data-bs-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li data-bs-target="#car" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#car" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#car" data-bs-slide-to="2"></li>
+                    <li data-bs-target="#car" data-bs-slide-to="3"></li>
+                </ul>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images (1).jpg" class="d-block w-100" alt="HP Pavilion">
+                        <div class="carousel-caption">
+                            <h3>HP Pavilion</h3>
+                            <p>Price: ₹45,000</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images (2).jpg" class="d-block w-100" alt="HP 14s">
+                        <div class="carousel-caption">
+                            <h3>HP 14s</h3>
+                            <p>Price: ₹41,000</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images (3).jpg" class="d-block w-100" alt="HP 15s">
+                        <div class="carousel-caption">
+                            <h3>HP 15s</h3>
+                            <p>Price: ₹49,000</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images (4).jpg" class="d-block w-100" alt="HP 16s">
+                        <div class="carousel-caption">
+                            <h3>HP 16s</h3>
+                            <p>Price: ₹50,000</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#car" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#car" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
